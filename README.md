@@ -1,6 +1,8 @@
-# CineRegal TV — Téléchargement
+# MYLA TV — Téléchargement
 
-Application pour ouvrir CineRegal sur Fire TV (Fire OS), Android TV et Google TV avec une télécommande.
+MYLA TV (anciennement CineRegal TV) permet d’ouvrir CineRegal sur Fire TV (Fire OS), Android TV et Google TV avec une télécommande.
+
+**Version 1.5.0 :** nouveau nom MYLA TV, icône et bannière créées avec ChatGPT, et bouton **Quitter l’application** directement dans le menu principal. Les installations existantes se mettent à jour sans désinstallation. Le fichier conserve le nom CineRegal-TV.apk pour préserver les anciens liens et les mises à jour.
 
 ## Télécharger sur la TV
 
@@ -23,10 +25,12 @@ Ce lien est public et ne nécessite aucun compte GitHub. Ouvre-le dans le naviga
 - Appui long sur OK : activer le curseur.
 - Retour : revenir ou désactiver le curseur.
 - Menu : ouvrir les options TV. Le bouton Menu TV dans la page donne le même accès.
+- **Menu → Quitter l’application** : arrêter la lecture et revenir à l’accueil de la TV.
 
 Ce dépôt contient les fichiers de distribution et leurs notes de version. Le code source est conservé dans un dépôt privé.
+
 ## Mises à jour automatiques
 
-À partir de la version 1.4.0, les nouvelles releases sont recherchées automatiquement pendant l’utilisation, hors lecture. Installer 1.4.0 manuellement une première fois si la TV utilise encore 1.3.0, puis autoriser CineRegal TV comme source d’installation lorsque le système le demande.
+À partir de la version 1.4.0, les nouvelles releases sont recherchées automatiquement pendant l’utilisation, hors lecture. Installer la dernière version manuellement une première fois si la TV utilise encore 1.3.0, puis autoriser MYLA TV comme source d’installation lorsque le système le demande.
 
 Le téléchargement et la vérification sont automatiques. L’installation silencieuse dépend de la version Android / Fire OS ; certaines TV demandent une confirmation. Le menu **Réglages et aide → Mises à jour** permet de vérifier ou réessayer à tout moment.
