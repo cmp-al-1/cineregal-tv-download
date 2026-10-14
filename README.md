@@ -1,36 +1,34 @@
-# MYLA TV — Téléchargement
+# MYLA TV
 
-MYLA TV (anciennement CineRegal TV) permet d’ouvrir CineRegal sur Fire TV (Fire OS), Android TV et Google TV avec une télécommande.
+Application pour piloter CineRegal sur Fire OS, Android TV et Google TV avec une télécommande.
 
-**Version 1.5.0 :** nouveau nom MYLA TV, icône et bannière créées avec ChatGPT, et bouton **Quitter l’application** directement dans le menu principal. Les installations existantes se mettent à jour sans désinstallation. Le fichier conserve le nom CineRegal-TV.apk pour préserver les anciens liens et les mises à jour.
+**Dernière version : 1.6.0**
 
-## Télécharger sur la TV
+[Télécharger directement l’APK](https://github.com/cmp-al-1/cineregal-tv-download/releases/latest/download/CineRegal-TV.apk) — aucun compte GitHub nécessaire.
 
-**[Télécharger le dernier APK](https://github.com/cmp-al-1/cineregal-tv-download/releases/latest/download/CineRegal-TV.apk)**
+[Voir la dernière release et sa somme SHA-256](https://github.com/cmp-al-1/cineregal-tv-download/releases/latest).
 
-Ce lien est public et ne nécessite aucun compte GitHub. Ouvre-le dans le navigateur ou l’application de téléchargement de la TV, puis installe le fichier APK.
+## Corrections 1.6.0
 
-[Voir les versions disponibles](https://github.com/cmp-al-1/cineregal-tv-download/releases) · [Somme SHA-256 du dernier APK](https://github.com/cmp-al-1/cineregal-tv-download/releases/latest/download/CineRegal-TV.apk.sha256)
+- Les dix défauts de l’audit TV sont corrigés : recherche avec flèches/OK, saisie de M, clavier, listes de tri, effacement des filtres, étapes avant lecture, focus des erreurs et des mises à jour.
+- Footer retiré et raccourci du lecteur déplacé pour libérer Lecture/Pause.
+- Étapes avant lecture prises en charge sur les films et les chaînes TV ; validation normale du site conservée.
+- Publicité intrusive observée dans le lecteur TV externe bloquée.
 
-## Compatibilité
+Tests sans compte : 29 scénarios web, 17 scénarios Android natifs, parcours du site réel, lecture Matrix et direct L’Équipe. L’émulateur utilise Android TV 14 ; aucun appareil Fire OS/TCL physique n’a été certifié.
 
-- Android / Fire OS à partir de l’API 21 pour l’installation ; une WebView récente est nécessaire pour afficher le site.
-- Vega OS n’est pas pris en charge.
-- APK de développement signé pour installation manuelle. Les codecs et lecteurs intégrés dépendent de l’appareil.
+## Installation et mises à jour
+
+Télécharger l’APK avec Downloader ou un navigateur sur la TV, puis autoriser l’installation depuis cette application si le système le demande. L’application apparaît sous le nom **MYLA TV**. Package, signature et nom du fichier restent identiques aux anciennes versions CineRegal TV pour conserver les données pendant une mise à jour.
+
+À partir de 1.4, MYLA TV détecte les nouvelles releases stables et télécharge l’APK automatiquement pendant l’utilisation. L’installation attend la fin de la lecture. Une autorisation initiale et, selon le système, une confirmation Android/Fire OS peuvent être nécessaires. Réglages et aide → Mises à jour permet une vérification manuelle.
 
 ## Télécommande
 
-- Flèches : sélectionner une affiche ou une commande.
-- OK : ouvrir ou valider.
-- Appui long sur OK : activer le curseur.
-- Retour : revenir ou désactiver le curseur.
-- Menu : ouvrir les options TV. Le bouton Menu TV dans la page donne le même accès.
-- **Menu → Quitter l’application** : arrêter la lecture et revenir à l’accueil de la TV.
+Flèches pour sélectionner, OK pour ouvrir, Menu pour les options, Retour pour fermer le clavier ou une liste et revenir. Appui long sur OK pour le curseur. **Quitter l’application** est dans le menu.
 
-Ce dépôt contient les fichiers de distribution et leurs notes de version. Le code source est conservé dans un dépôt privé.
+## Compatibilité
 
-## Mises à jour automatiques
+APK universel installable sur Android/Fire OS API 21+ avec un WebView suffisamment récent pour le site. Compatible au niveau de l’installation avec les TCL sous Android TV/Google TV. Un moteur trop ancien, notamment WebView 90, ne peut pas afficher le site actuel et doit être mis à jour. Les DRM, codecs et lecteurs externes dépendent de l’appareil. Vega OS utilise un autre format et ne peut pas installer cet APK.
 
-À partir de la version 1.4.0, les nouvelles releases sont recherchées automatiquement pendant l’utilisation, hors lecture. Installer la dernière version manuellement une première fois si la TV utilise encore 1.3.0, puis autoriser MYLA TV comme source d’installation lorsque le système le demande.
-
-Le téléchargement et la vérification sont automatiques. L’installation silencieuse dépend de la version Android / Fire OS ; certaines TV demandent une confirmation. Le menu **Réglages et aide → Mises à jour** permet de vérifier ou réessayer à tout moment.
+Le site, les comptes et les contenus restent fournis par CineRegal. Le filtrage d’une régie externe observée peut nécessiter une adaptation si elle change de domaine.
