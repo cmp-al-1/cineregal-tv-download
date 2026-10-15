@@ -2,20 +2,24 @@
 
 Application pour piloter CineRegal sur Fire OS, Android TV et Google TV avec une télécommande.
 
-**Dernière version : 1.6.0**
+**Dernière version : 1.7.0**
 
 [Télécharger directement l’APK](https://github.com/cmp-al-1/cineregal-tv-download/releases/latest/download/CineRegal-TV.apk) — aucun compte GitHub nécessaire.
 
 [Voir la dernière release et sa somme SHA-256](https://github.com/cmp-al-1/cineregal-tv-download/releases/latest).
 
-## Corrections 1.6.0
+## Nouveautés 1.7.0
 
-- Les dix défauts de l’audit TV sont corrigés : recherche avec flèches/OK, saisie de M, clavier, listes de tri, effacement des filtres, étapes avant lecture, focus des erreurs et des mises à jour.
-- Footer retiré et raccourci du lecteur déplacé pour libérer Lecture/Pause.
-- Étapes avant lecture prises en charge sur les films et les chaînes TV ; validation normale du site conservée.
-- Publicité intrusive observée dans le lecteur TV externe bloquée.
+- Logo MYLA animé au démarrage et pendant les étapes avant lecture ; les fenêtres publicitaires restent derrière cet écran.
+- « Accéder au contenu » activé automatiquement dès que le site le permet. « Afficher la vérification » révèle la validation normale si elle demande une intervention.
+- Lecteur TV : OK pour lecture/pause ; Gauche/Bas −10 secondes, Droite/Haut +10 secondes.
+- Titre, position et durée dans un HUD temporaire, sans réglage du volume. Le volume reste géré par la télécommande.
+- Menu → Commandes du lecteur donne accès aux épisodes, au plein écran et aux options ; Retour revient au mode TV.
+- Animation arrêtée en arrière-plan et compatible avec la désactivation des animations Android.
 
-Tests sans compte : 29 scénarios web, 17 scénarios Android natifs, parcours du site réel, lecture Matrix et direct L’Équipe. L’émulateur utilise Android TV 14 ; aucun appareil Fire OS/TCL physique n’a été certifié.
+Les corrections de l’audit TV, la suppression du footer et de la popup Discord, Quitter et les mises à jour GitHub sont conservés. La validation normale du site reste requise.
+
+Tests sans compte : 38 scénarios web, 21 scénarios Android natifs, 4 parcours de base du site réel et lecture de Matrix et de deux épisodes. L’émulateur utilise Android TV 14 ; aucun appareil Fire OS/TCL physique n’a été certifié. Les lecteurs externes gardent leurs commandes propres.
 
 ## Installation et mises à jour
 
@@ -25,7 +29,7 @@ Télécharger l’APK avec Downloader ou un navigateur sur la TV, puis autoriser
 
 ## Télécommande
 
-Flèches pour sélectionner, OK pour ouvrir, Menu pour les options, Retour pour fermer le clavier ou une liste et revenir. Appui long sur OK pour le curseur. **Quitter l’application** est dans le menu.
+Dans le catalogue : flèches pour sélectionner, OK pour ouvrir. Dans un film ou épisode : OK pour lecture/pause et flèches pour ±10 secondes. Menu ouvre les options ; Retour ferme le clavier ou une liste et revient. Appui long sur OK pour le curseur. **Quitter l’application** est dans le menu.
 
 ## Compatibilité
 
