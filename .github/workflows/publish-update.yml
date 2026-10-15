@@ -1,0 +1,42 @@
+name: Publish verified TV update
+on:
+  release:
+    types: [published, edited]
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: myla-update-distribution
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify release and prepare static files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/publish-update.mjs
+      - name: Publish raw HTTPS mirror
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add docs
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish verified MYLA TV update"
+            git push origin HEAD:main
+          fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - uses: actions/deploy-pages@v4
+        id: deployment
+      - name: Verify both public download endpoints
+        run: node scripts/verify-update.mjs

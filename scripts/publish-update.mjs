@@ -1,0 +1,42 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import { execFileSync } from 'node:child_process';
+
+const repo = 'cmp-al-1/cineregal-tv-download';
+const certificate = '715827d17d68598923d3d1c3d26a53e3dec3d194f9ef996040fc87427096c9b7';
+const exec = (name, args) => execFileSync(name, args, { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] });
+const release = JSON.parse(exec('gh', ['release', 'view', '--repo', repo, '--json', 'tagName,isDraft,isPrerelease,assets']));
+if (release.isDraft || release.isPrerelease || !/^v\d+\.\d+\.\d+$/.test(release.tagName)) throw Error('Stable release required');
+const asset = release.assets.find(a => a.name === 'CineRegal-TV.apk');
+const checksum = release.assets.find(a => a.name === 'CineRegal-TV.apk.sha256');
+if (!asset || !checksum) throw Error('Both release assets required before publication');
+const tmp = fs.mkdtempSync(path.join(process.env.RUNNER_TEMP || '.tmp-', 'myla-'));
+exec('gh', ['release', 'download', release.tagName, '--repo', repo, '--dir', tmp, '--pattern', 'CineRegal-TV.apk*']);
+const apk = path.join(tmp, 'CineRegal-TV.apk'), bytes = fs.readFileSync(apk);
+const hash = crypto.createHash('sha256').update(bytes).digest('hex');
+if (bytes.length < 1 || bytes.length > 40 * 1024 * 1024 || fs.readFileSync(apk + '.sha256', 'utf8').trim() !== hash + '  CineRegal-TV.apk') throw Error('Release size/checksum mismatch');
+const tools = path.join(process.env.ANDROID_HOME, 'build-tools');
+const toolVersion = fs.readdirSync(tools).filter(s => /^\d+\.\d+\.\d+$/.test(s)).sort((a,b) => a.localeCompare(b, undefined, {numeric:true})).at(-1);
+const aapt = exec(path.join(tools, toolVersion, 'aapt'), ['dump', 'badging', apk]);
+const pkg = aapt.match(/package: name='([^']+)' versionCode='(\d+)' versionName='([^']+)'/);
+if (!pkg || pkg[1] !== 'us.cineregal.tv' || 'v' + pkg[3] !== release.tagName) throw Error('Release package/version mismatch');
+const signatures = exec(path.join(tools, toolVersion, 'apksigner'), ['verify', '--print-certs', apk]);
+const certs = [...signatures.matchAll(/certificate SHA-256 digest: ([a-f0-9]+)/g)].map(m => m[1]);
+if (certs.length !== 1 || certs[0] !== certificate) throw Error('Unexpected signing certificate');
+const manifest = {schema:1, version:pkg[3], versionCode:Number(pkg[2]), size:bytes.length, sha256:hash, path:`updates/${release.tagName}/CineRegal-TV.apk`};
+const previous = 'docs/updates/latest.json';
+if (fs.existsSync(previous)) {
+  const old = JSON.parse(fs.readFileSync(previous));
+  if (old.versionCode > manifest.versionCode || (old.versionCode === manifest.versionCode && old.sha256 !== hash)) throw Error('Rollback or release replacement refused');
+}
+const destination = path.join('docs', manifest.path);
+fs.mkdirSync(path.dirname(destination), { recursive:true });
+if (fs.existsSync(destination) && !fs.readFileSync(destination).equals(bytes)) throw Error('Versioned APK is immutable');
+fs.writeFileSync(destination, bytes);
+fs.copyFileSync(apk + '.sha256', destination + '.sha256');
+fs.writeFileSync('docs/MYLA-TV.apk', bytes);
+fs.writeFileSync('docs/MYLA-TV.apk.sha256', `${hash}  MYLA-TV.apk\n`);
+fs.writeFileSync('docs/.nojekyll', '');
+fs.writeFileSync(previous, JSON.stringify(manifest, null, 2) + '\n');
+console.log(`Validated ${manifest.version}: ${bytes.length} bytes, SHA-256 ${hash}, original signer`);
