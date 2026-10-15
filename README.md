@@ -2,25 +2,25 @@
 
 Application pour piloter CineRegal sur Fire OS, Android TV et Google TV avec une télécommande.
 
-**Dernière version : 1.8.0**
+**Dernière version : 1.9.0**
 
 [Télécharger directement l’APK](https://github.com/cmp-al-1/cineregal-tv-download/releases/latest/download/CineRegal-TV.apk) — aucun compte GitHub nécessaire.
 
 [Voir la release et sa somme SHA-256](https://github.com/cmp-al-1/cineregal-tv-download/releases/latest).
 
-## Nouveautés 1.8.0
+## Nouveautés 1.9.0
 
-- Fiches films, séries et animés sur un écran TV : affiche, titre, synopsis court et actions.
-- Épisodes et saisons dans un panneau séparé ; synopsis complet avec Voir plus.
-- Informations et avis conserve les commentaires, vidéos et contenus complémentaires.
-- Retour ferme les panneaux et restaure la sélection.
-- Haut remonte d’abord dans le contenu avant de rejoindre l’en-tête fixe.
-- Raccourci flottant retiré du lecteur : la touche Menu de la télécommande ouvre les options.
-- Appui court : ±10 secondes ; maintenir une flèche accélère à 30, 60 puis 120 secondes par déplacement, avec arrêt au relâchement.
+- En-tête du site retiré pour laisser plus de place au contenu.
+- Films, Séries et Animés : barre compacte avec titre, recherche, tri et bouton Filtres.
+- Genres, périodes et notes dans un panneau séparé ; Retour ferme le panneau et restaure la sélection.
+- Recherche globale accessible dans le menu de la télécommande ; Connexion / compte dans Réglages et aide.
+- Contrôles Cast/Chromecast/ScreenShare/AirPlay reconnus masqués dans le lecteur et lecture distante HTML désactivée.
+
+Les fiches sur un écran TV, épisodes et saisons dans un panneau séparé, synopsis court avec Voir plus, navigation dans le contenu et avance accélérée restent présents. Appui court : ±10 secondes ; maintenir une flèche accélère à 30, 60 puis 120 secondes par déplacement, avec arrêt au relâchement. Menu ouvre les options du lecteur.
 
 L’attente MYLA animée, les étapes publicitaires automatiques, le clic sur Accéder au contenu dès que le site le permet, le HUD sans volume, la suppression du footer et de la popup Discord, Quitter et le correctif de mises à jour 1.7.1 sont conservés. La validation normale du site reste requise.
 
-Validation : 44 scénarios web et 26 scénarios Android ; fiches réelles Matrix et Surveillant, synopsis et épisodes contrôlés dans l’émulateur Android TV 14. Affichage vérifié à 1280×720 et 960×540. Les parcours globaux des catalogues ont rencontré une erreur serveur 502 durant la campagne. Aucune TV Fire OS/TCL physique certifiée ; les lecteurs externes gardent leurs commandes propres.
+Validation : 48 tests web, 28 scénarios Android natifs et 4 parcours réels dans l’APK réussis sur Android TV 14. Catalogue réel avec filtre Comédie et recherche globale vérifiés ; rendu contrôlé à 1280×720 et 960×540. Aucune TV Fire OS/TCL physique certifiée ; les lecteurs externes gardent leurs commandes propres.
 
 ## Installation et mises à jour
 
