@@ -2,11 +2,17 @@
 
 Application pour piloter CineRegal sur Fire OS, Android TV et Google TV avec une télécommande.
 
-**Dernière version : 1.7.0**
+**Dernière version : 1.7.1**
 
 [Télécharger directement l’APK](https://github.com/cmp-al-1/cineregal-tv-download/releases/latest/download/CineRegal-TV.apk) — aucun compte GitHub nécessaire.
 
 [Voir la dernière release et sa somme SHA-256](https://github.com/cmp-al-1/cineregal-tv-download/releases/latest).
+
+## Correction 1.7.1
+
+La recherche de mises à jour utilise d’abord le lien public GitHub, puis l’API en repli. Une coupure transitoire est réessayée une fois et les erreurs affichées distinguent connexion, délai, sécurité, HTTP, stockage et fichier invalide.
+
+Si la mise à jour d’une ancienne version affiche « Vérifie Internet », télécharger l’APK avec le lien ci-dessus et l’installer par-dessus MYLA TV pour conserver les données et bénéficier du mécanisme corrigé. Les validations de signature et de SHA-256 restent obligatoires.
 
 ## Nouveautés 1.7.0
 
@@ -19,7 +25,7 @@ Application pour piloter CineRegal sur Fire OS, Android TV et Google TV avec une
 
 Les corrections de l’audit TV, la suppression du footer et de la popup Discord, Quitter et les mises à jour GitHub sont conservés. La validation normale du site reste requise.
 
-Tests sans compte : 38 scénarios web, 21 scénarios Android natifs, 4 parcours de base du site réel et lecture de Matrix et de deux épisodes. L’émulateur utilise Android TV 14 ; aucun appareil Fire OS/TCL physique n’a été certifié. Les lecteurs externes gardent leurs commandes propres.
+Tests sans compte : 38 scénarios web, 24 scénarios Android natifs, 4 parcours de base du site réel et lecture de Matrix et de deux épisodes. L’émulateur utilise Android TV 14 ; aucun appareil Fire OS/TCL physique n’a été certifié. Les lecteurs externes gardent leurs commandes propres.
 
 ## Installation et mises à jour
 
