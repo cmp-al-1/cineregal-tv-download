@@ -11,7 +11,7 @@ if (release.isDraft || release.isPrerelease || !/^v\d+\.\d+\.\d+$/.test(release.
 const asset = release.assets.find(a => a.name === 'CineRegal-TV.apk');
 const checksum = release.assets.find(a => a.name === 'CineRegal-TV.apk.sha256');
 if (!asset || !checksum) throw Error('Both release assets required before publication');
-const tmp = fs.mkdtempSync(path.join(process.env.RUNNER_TEMP || '.tmp-', 'myla-'));
+const tmp = fs.mkdtempSync(path.join(process.env.RUNNER_TEMP || process.env.TMPDIR || '/tmp', 'myla-'));
 exec('gh', ['release', 'download', release.tagName, '--repo', repo, '--dir', tmp, '--pattern', 'CineRegal-TV.apk*']);
 const apk = path.join(tmp, 'CineRegal-TV.apk'), bytes = fs.readFileSync(apk);
 const hash = crypto.createHash('sha256').update(bytes).digest('hex');
