@@ -2,31 +2,31 @@
 
 Application pour piloter CineRegal sur Fire OS, Android TV et Google TV avec une télécommande.
 
-**Dernière version : 1.9.0**
+**Dernière version : 1.10.0**
 
-[Télécharger directement l’APK](https://github.com/cmp-al-1/cineregal-tv-download/releases/latest/download/CineRegal-TV.apk) — aucun compte GitHub nécessaire.
+[Télécharger directement l’APK](https://cmp-al-1.github.io/cineregal-tv-download/MYLA-TV.apk) — aucun compte GitHub nécessaire.
 
 [Voir la release et sa somme SHA-256](https://github.com/cmp-al-1/cineregal-tv-download/releases/latest).
 
-## Nouveautés 1.9.0
+## Nouveautés 1.10.0
 
-- En-tête du site retiré pour laisser plus de place au contenu.
-- Films, Séries et Animés : barre compacte avec titre, recherche, tri et bouton Filtres.
-- Genres, périodes et notes dans un panneau séparé ; Retour ferme le panneau et restaure la sélection.
-- Recherche globale accessible dans le menu de la télécommande ; Connexion / compte dans Réglages et aide.
-- Contrôles Cast/Chromecast/ScreenShare/AirPlay reconnus masqués dans le lecteur et lecture distante HTML désactivée.
+- Mises à jour par fichiers HTTPS directs, avec miroir de secours et releases classiques en dernier recours.
+- Fichiers contrôlés avant publication et après téléchargement : taille, SHA-256, package, version et signature.
+- Vérifier maintenant ouvre l’installation système lorsqu’un APK est prêt. Annuler conserve le fichier et permet de réessayer.
+- Diagnostic conservé par étape et bouton rendu après un échec ; une erreur du catalogue ne ferme plus le menu des mises à jour.
+- Une réponse ancienne du serveur principal est confrontée au miroir avant d’annoncer que l’app est à jour.
 
-Les fiches sur un écran TV, épisodes et saisons dans un panneau séparé, synopsis court avec Voir plus, navigation dans le contenu et avance accélérée restent présents. Appui court : ±10 secondes ; maintenir une flèche accélère à 30, 60 puis 120 secondes par déplacement, avec arrêt au relâchement. Menu ouvre les options du lecteur.
+Les adaptations TV précédentes sont conservées : en-tête et footer masqués, recherche et filtres compacts, fiches sur un écran, synopsis avec Voir plus, épisodes séparés, commandes du lecteur et avance accélérée, attente MYLA et étapes avant lecture. La validation normale du site reste requise.
 
-L’attente MYLA animée, les étapes publicitaires automatiques, le clic sur Accéder au contenu dès que le site le permet, le HUD sans volume, la suppression du footer et de la popup Discord, Quitter et le correctif de mises à jour 1.7.1 sont conservés. La validation normale du site reste requise.
-
-Validation : 48 tests web, 28 scénarios Android natifs et 4 parcours réels dans l’APK réussis sur Android TV 14. Catalogue réel avec filtre Comédie et recherche globale vérifiés ; rendu contrôlé à 1280×720 et 960×540. Aucune TV Fire OS/TCL physique certifiée ; les lecteurs externes gardent leurs commandes propres.
+Validation : 48 tests web et 32 scénarios Android réussis ; avant publication, installation complète via serveur public sur émulateur Android TV 14 et parcours manuel Android TV 11 avec annulation et reprise, intégrité et données conservées. Les tests ne constituent pas une certification de TV Fire OS/TCL physiques.
 
 ## Installation et mises à jour
 
 Télécharger l’APK avec Downloader ou un navigateur sur la TV et l’installer par-dessus MYLA TV. Package, signature et nom du fichier restent identiques aux anciennes versions CineRegal TV pour conserver les données. Autoriser la source d’installation si le système le demande.
 
-Si une ancienne version, notamment 1.5.0, affiche « Vérifie Internet » et ne parvient pas à se mettre à jour, utiliser le lien direct ci-dessus et installer cet APK manuellement pour bénéficier du mécanisme corrigé. Depuis 1.7.1, la recherche utilise le lien public GitHub avec l’API en repli, les tentatives sont bornées et les erreurs de réseau, sécurité, HTTP, stockage et validation sont distinctes.
+Si une ancienne version, notamment 1.7.0, affiche « Vérifie Internet » et ne parvient pas à se mettre à jour, utiliser le lien direct ci-dessus et installer cet APK manuellement pour bénéficier du mécanisme corrigé. Depuis 1.10, le parcours normal utilise un petit manifeste HTTPS et un miroir sans API ni redirection de release. Les tentatives sont bornées et les erreurs de réseau, sécurité, HTTP, stockage et validation sont distinctes.
+
+Chaque release stable déclenche la vérification de l’APK, sa publication statique et le contrôle des deux téléchargements anonymes. Les deux sources restent hébergées par GitHub : une panne générale peut affecter les deux.
 
 Les nouvelles releases stables sont recherchées pendant l’utilisation et téléchargées automatiquement, avec installation hors lecture. Android/Fire OS ou sa protection système peut imposer une confirmation. Réglages et aide → Mises à jour permet une vérification manuelle.
 
