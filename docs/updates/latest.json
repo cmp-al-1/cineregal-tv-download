@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "version": "1.10.0",
-  "versionCode": 12,
-  "size": 184303,
-  "sha256": "fd676c15f86ce86fb16067524b8b3cc5f3a20646808b208c5ce178c7343a5315",
-  "path": "updates/v1.10.0/CineRegal-TV.apk"
+  "version": "1.10.1",
+  "versionCode": 13,
+  "size": 184309,
+  "sha256": "d3fbc65df590b6e66a0dfee3a69828515f8277f109702ca920f657f8084f0464",
+  "path": "updates/v1.10.1/CineRegal-TV.apk"
 }
