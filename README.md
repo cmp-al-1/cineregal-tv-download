@@ -2,15 +2,19 @@
 
 Application pour piloter CineRegal sur Fire OS, Android TV et Google TV avec une télécommande.
 
-**Dernière version : 1.10.1**
+**Dernière version : 2.0.0**
 
 [Télécharger directement l’APK](https://cmp-al-1.github.io/cineregal-tv-download/MYLA-TV.apk) — aucun compte GitHub nécessaire.
 
 [Voir la release et sa somme SHA-256](https://github.com/cmp-al-1/cineregal-tv-download/releases/latest).
 
-## Nouveautés 1.10.1
+## Nouveautés 2.0.0
 
-Le domaine du site est maintenant [cineregal.work](https://cineregal.work/). L’accueil, les catégories et les lecteurs utilisent cette adresse. Une ancienne page restaurée hors du domaine courant revient au nouvel accueil. Package et signature restent identiques : installer par-dessus la version actuelle.
+MYLA TV lit d’abord le bouton d’accès de [cineregal.live](https://cineregal.live/) pour trouver le serveur courant. Un changement de domaine annoncé par ce portail ne nécessite plus de nouvel APK. Si le portail est indisponible, l’app utilise la dernière adresse enregistrée ; Réessayer relance la recherche. Une panne du catalogue peut déclencher une redécouverte bornée, hors lecture, sans boucle. Le maintien du portail et de son bouton reste nécessaire.
+
+Les catalogues reconnus, fiches, synopsis, saisons et épisodes ont une interface Android TV native : navigation latérale, affiches sélectionnables, recherche explicite et retour à la sélection précédente. Les comptes, filtres, fonctions secondaires et lecteurs conservent leur interface web.
+
+Validation de cette version : 56 tests web, 33 scénarios Android existants, 12 parcours natifs et 11 contrôles du portail, dont une lecture HTTPS du portail réel depuis Android. Le catalogue réel renvoie une vérification Cloudflare dans notre environnement : la lecture complète sur Fire TV/TCL reste à confirmer.
 
 ## Mises à jour depuis 1.10.0
 
@@ -22,7 +26,7 @@ Le domaine du site est maintenant [cineregal.work](https://cineregal.work/). L�
 
 Les adaptations TV précédentes sont conservées : en-tête et footer masqués, recherche et filtres compacts, fiches sur un écran, synopsis avec Voir plus, épisodes séparés, commandes du lecteur et avance accélérée, attente MYLA et étapes avant lecture. La validation normale du site reste requise.
 
-Validation : 48 tests web et 32 scénarios Android réussis ; avant publication, installation complète via serveur public sur émulateur Android TV 14 et parcours manuel Android TV 11 avec annulation et reprise, intégrité et données conservées. Les tests ne constituent pas une certification de TV Fire OS/TCL physiques.
+Le mécanisme de mise à jour HTTPS a également été vérifié lors des versions précédentes sur Android TV 14 et Android TV 11, avec intégrité des APK et conservation des données. Les tests sur émulateur ne certifient pas les appareils Fire OS/TCL physiques.
 
 ## Installation et mises à jour
 
