@@ -2,19 +2,19 @@
 
 Application pour piloter CineRegal sur Fire OS, Android TV et Google TV avec une télécommande.
 
-**Dernière version : 2.0.0**
+**Dernière version : 2.1.0**
 
 [Télécharger directement l’APK](https://cmp-al-1.github.io/cineregal-tv-download/MYLA-TV.apk) — aucun compte GitHub nécessaire.
 
 [Voir la release et sa somme SHA-256](https://github.com/cmp-al-1/cineregal-tv-download/releases/latest).
 
-## Nouveautés 2.0.0
+## Nouveautés 2.1.0
 
-MYLA TV lit d’abord le bouton d’accès de [cineregal.live](https://cineregal.live/) pour trouver le serveur courant. Un changement de domaine annoncé par ce portail ne nécessite plus de nouvel APK. Si le portail est indisponible, l’app utilise la dernière adresse enregistrée ; Réessayer relance la recherche. Une panne du catalogue peut déclencher une redécouverte bornée, hors lecture, sans boucle. Le maintien du portail et de son bouton reste nécessaire.
+**Réglages et aide → Touche du menu → Choisir une touche** : appuyer sur le bouton voulu, le relâcher puis confirmer. Le choix est conservé après redémarrage. Un appui ouvre/ferme le menu ; maintenir 2 secondes rouvre le réglage pour changer la touche ou rétablir Menu. Même OK, Retour ou une flèche peuvent être associés : les commandes normales restent utilisables dans ce réglage de secours. Les touches réservées par la TV, comme Accueil et Marche/arrêt, ne sont pas transmises à l’app.
 
-Les catalogues reconnus, fiches, synopsis, saisons et épisodes ont une interface Android TV native : navigation latérale, affiches sélectionnables, recherche explicite et retour à la sélection précédente. Les comptes, filtres, fonctions secondaires et lecteurs conservent leur interface web.
+Le navigateur garde désormais son identité native. Une page Cloudflare est affichée sans adaptations TV ; son HTTP 403 est distingué d’une panne du catalogue. Les rechargements ne renouvellent pas le délai de 90 secondes : une vérification qui n’aboutit pas est suspendue avec Réessayer, paramètres système et navigateur externe. Aucun CAPTCHA n’est résolu automatiquement. L’acceptation par Cloudflare sur une TV donnée reste à confirmer ; un moteur à jour ou une correction du site peut être nécessaire.
 
-Validation de cette version : 56 tests web, 33 scénarios Android existants, 12 parcours natifs et 11 contrôles du portail, dont une lecture HTTPS du portail réel depuis Android. Le catalogue réel renvoie une vérification Cloudflare dans notre environnement : la lecture complète sur Fire TV/TCL reste à confirmer.
+Les fonctions 2.0 sont conservées : catalogue, fiches et épisodes en interface Android TV ; adresse active lue depuis [cineregal.live](https://cineregal.live/), avec dernière adresse en secours. Un changement annoncé par ce portail ne nécessite pas de nouvel APK.
 
 ## Mises à jour depuis 1.10.0
 
