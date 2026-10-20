@@ -2,19 +2,19 @@
 
 Application pour piloter CineRegal sur Fire OS, Android TV et Google TV avec une télécommande.
 
-**Dernière version : 2.1.0**
+**Dernière version : 2.2.0**
 
 [Télécharger directement l’APK](https://cmp-al-1.github.io/cineregal-tv-download/MYLA-TV.apk) — aucun compte GitHub nécessaire.
 
 [Voir la release et sa somme SHA-256](https://github.com/cmp-al-1/cineregal-tv-download/releases/latest).
 
-## Nouveautés 2.1.0
+## Nouveautés 2.2.0
 
-**Réglages et aide → Touche du menu → Choisir une touche** : appuyer sur le bouton voulu, le relâcher puis confirmer. Le choix est conservé après redémarrage. Un appui ouvre/ferme le menu ; maintenir 2 secondes rouvre le réglage pour changer la touche ou rétablir Menu. Même OK, Retour ou une flèche peuvent être associés : les commandes normales restent utilisables dans ce réglage de secours. Les touches réservées par la TV, comme Accueil et Marche/arrêt, ne sont pas transmises à l’app.
+**Reprendre** est maintenant une catégorie dans le menu et la navigation latérale. Les films et épisodes commencés sur cette TV y apparaissent avec leur temps de lecture. Une carte rouvre le lecteur et rétablit sa position lorsque l’application peut piloter sa vidéo, sans forcer la lecture. L’ancien bouton qui fermait seulement le menu s’appelle désormais **Revenir à l’écran**.
 
-Le navigateur garde désormais son identité native. Une page Cloudflare est affichée sans adaptations TV ; son HTTP 403 est distingué d’une panne du catalogue. Les rechargements ne renouvellent pas le délai de 90 secondes : une vérification qui n’aboutit pas est suspendue avec Réessayer, paramètres système et navigateur externe. Aucun CAPTCHA n’est résolu automatiquement. L’acceptation par Cloudflare sur une TV donnée reste à confirmer ; un moteur à jour ou une correction du site peut être nécessaire.
+L’historique est conservé localement, sans compte, limité à 30 contenus et adapté au domaine courant. Les contenus terminés sont retirés. Il commence avec cette version : les anciennes positions ne sont pas importées. Les lecteurs dans une iframe d’un autre domaine gardent leur propre gestion de la position.
 
-Les fonctions 2.0 sont conservées : catalogue, fiches et épisodes en interface Android TV ; adresse active lue depuis [cineregal.live](https://cineregal.live/), avec dernière adresse en secours. Un changement annoncé par ce portail ne nécessite pas de nouvel APK.
+Les fonctions précédentes restent disponibles : catalogue, fiches et épisodes Android TV ; touche du menu personnalisable ; adresse active lue depuis [cineregal.live](https://cineregal.live/) ; vérification normale du site avec récupération après attente prolongée.
 
 ## Mises à jour depuis 1.10.0
 
