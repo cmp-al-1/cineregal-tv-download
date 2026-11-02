@@ -2,19 +2,19 @@
 
 Application pour piloter CineRegal sur Fire OS, Android TV et Google TV avec une télécommande.
 
-**Dernière version : 2.2.0**
+**Dernière version : 2.3.0**
 
 [Télécharger directement l’APK](https://cmp-al-1.github.io/cineregal-tv-download/MYLA-TV.apk) — aucun compte GitHub nécessaire.
 
 [Voir la release et sa somme SHA-256](https://github.com/cmp-al-1/cineregal-tv-download/releases/latest).
 
-## Nouveautés 2.2.0
+## Nouveautés 2.3.0
 
-**Reprendre** est maintenant une catégorie dans le menu et la navigation latérale. Les films et épisodes commencés sur cette TV y apparaissent avec leur temps de lecture. Une carte rouvre le lecteur et rétablit sa position lorsque l’application peut piloter sa vidéo, sans forcer la lecture. L’ancien bouton qui fermait seulement le menu s’appelle désormais **Revenir à l’écran**.
+**Nouvelle interface TV.** Rail d’icônes qui se déploie, bandeau avec l’affiche sélectionnée en fond, grille de six affiches et fiche avec actions en ligne. Pour une série, toutes les saisons sont listées à gauche des épisodes et se choisissent directement. Après le lancement, changer de page garde l’écran affiché avec une fine barre de chargement au lieu de l’écran MYLA.
 
-L’historique est conservé localement, sans compte, limité à 30 contenus et adapté au domaine courant. Les contenus terminés sont retirés. Il commence avec cette version : les anciennes positions ne sont pas importées. Les lecteurs dans une iframe d’un autre domaine gardent leur propre gestion de la position.
+**Lecteur.** Haut ou Bas ouvre un panneau : lecture/pause, ±10 s, épisode suivant, épisodes de la saison, commandes du site et retour à la fiche. Retour referme le panneau et OK met toujours en pause. Gauche/Droite avancent ou reculent. La liste d’épisodes apparaît quand l’épisode est lancé depuis la fiche de la série.
 
-Les fonctions précédentes restent disponibles : catalogue, fiches et épisodes Android TV ; touche du menu personnalisable ; adresse active lue depuis [cineregal.live](https://cineregal.live/) ; vérification normale du site avec récupération après attente prolongée.
+Les fonctions précédentes restent disponibles : catégorie Reprendre ; touche du menu personnalisable ; adresse active lue depuis [cineregal.live](https://cineregal.live/) ; vérification normale du site.
 
 ## Mises à jour depuis 1.10.0
 
