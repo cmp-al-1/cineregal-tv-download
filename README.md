@@ -2,13 +2,17 @@
 
 Application pour piloter CineRegal sur Fire OS, Android TV et Google TV avec une télécommande.
 
-**Dernière version : 2.3.0**
+**Dernière version : 2.3.1**
 
 [Télécharger directement l’APK](https://cmp-al-1.github.io/cineregal-tv-download/MYLA-TV.apk) — aucun compte GitHub nécessaire.
 
 [Voir la release et sa somme SHA-256](https://github.com/cmp-al-1/cineregal-tv-download/releases/latest).
 
-## Nouveautés 2.3.0
+## Nouveautés 2.3.1
+
+**2.3.1 :** la liste « Épisodes » du site ne s’affiche plus à droite de la vidéo ; le panneau MYLA la remplace.
+
+
 
 **Nouvelle interface TV.** Rail d’icônes qui se déploie, bandeau avec l’affiche sélectionnée en fond, grille de six affiches et fiche avec actions en ligne. Pour une série, toutes les saisons sont listées à gauche des épisodes et se choisissent directement. Après le lancement, changer de page garde l’écran affiché avec une fine barre de chargement au lieu de l’écran MYLA.
 
