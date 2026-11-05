@@ -2,23 +2,19 @@
 
 Application pour piloter CineRegal sur Fire OS, Android TV et Google TV avec une télécommande.
 
-**Dernière version : 2.5.0**
+**Dernière version : 2.6.0**
 
 [Télécharger directement l’APK](https://cmp-al-1.github.io/cineregal-tv-download/MYLA-TV.apk) — aucun compte GitHub nécessaire.
 
 [Voir la release et sa somme SHA-256](https://github.com/cmp-al-1/cineregal-tv-download/releases/latest).
 
-## Nouveautés 2.5.0
+## Nouveautés 2.6.0
 
-**Lecteur et menu (2.5).** Retour met d’abord en pause, un second Retour revient à la fiche. Les boutons Précédent/Suivant du site sont masqués et restent dans le panneau Haut/Bas. Le menu et les réglages adoptent le style de l’interface, et la liste d’épisodes s’ouvre sur la saison que tu regardes.
+**Nouvel accueil.** Une grande carte **Reprendre** relance la dernière lecture à sa position ; si l’épisode était terminé, elle propose directement l’**épisode suivant**, avec « Voir la fiche » à côté.
 
-**Ma liste sans compte.** Sur la fiche d’un film ou d’une série, « Ajouter à ma liste » enregistre le titre sur la TV ; le rail **Ma liste** l’affiche, sans connexion au site.
+**Recommandations par genre.** Action, Comédie, Drame, Horreur, Thriller, Science-Fiction, Animation et Romance, films et séries mélangés, en rangées qui défilent avec la télécommande. Les sections de l’accueil du site restent affichées ensuite.
 
-**Où tu en es.** La fiche propose d’abord « Reprendre S2E3 · 12:30 » ou l’épisode suivant ; les épisodes commencés montrent leur position, les épisodes vus une coche, et la liste s’ouvre sur l’épisode en cours. Un contenu commencé reprend à sa position, d’où qu’il soit ouvert ; **Reprendre** ne montre qu’une entrée par série.
-
-**Lecteur et recherche.** Les gros boutons Précédent/Suivant et la liste d’épisodes du site sont masqués : le panneau Haut/Bas les remplace. La touche Entrée du clavier lance la recherche.
-
-Les fonctions précédentes restent disponibles : nouvelle interface TV, choix des saisons, touche du menu personnalisable, adresse active lue depuis [cineregal.live](https://cineregal.live/), vérification normale du site.
+Les fonctions précédentes restent disponibles : Ma liste sans compte, suivi des épisodes et des saisons, panneau du lecteur (Haut/Bas), Retour qui met en pause, touche du menu personnalisable, adresse active lue depuis [cineregal.live](https://cineregal.live/).
 
 ## Mises à jour depuis 1.10.0
 
